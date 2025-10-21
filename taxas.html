@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Indique MEI — Entenda as Taxas</title>
+  <link rel="icon" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{ --bg:#0b0b0b; --card:#141414; --muted:#a1a1aa; --white:#fff; --green:#4ade80; --blue:#38bdf8; --border:rgba(255,255,255,.12); }
+    *{box-sizing:border-box} body{margin:0; font-family:Inter,system-ui,Segoe UI,Roboto; background:var(--bg); color:var(--white)}
+    a{color:inherit; text-decoration:none}
+    header{display:flex; align-items:center; justify-content:space-between; padding:16px 24px; border-bottom:1px solid var(--border); background:rgba(255,255,255,.03)}
+    .logo{height:36px; border-radius:8px; box-shadow:0 0 0 1px var(--border)}
+    .container{max-width:1100px; margin:0 auto; padding:24px}
+    h1{font-size:28px} h2{margin-top:24px}
+    .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin-top:12px}
+    .card{background:var(--card); border:1px solid var(--border); border-radius:14px; padding:18px}
+    table{width:100%; border-collapse:collapse; margin-top:10px}
+    th,td{padding:10px; border-bottom:1px solid var(--border); text-align:left}
+    .muted{color:var(--muted)}
+    .badge{display:inline-block; padding:4px 8px; border-radius:8px; background:rgba(56,189,248,.15); color:#e0f2fe; font-weight:700; font-size:.85rem}
+    .btn{background:#2563eb; color:#fff; padding:10px 14px; border-radius:10px; display:inline-block; font-weight:700}
+  </style>
+</head>
+<body>
+  <header>
+    <div style="display:flex; align-items:center; gap:10px">
+      <img src="logo.png" class="logo" alt="Indique MEI">
+      <strong>Entenda as Taxas</strong>
+    </div>
+    <a class="btn" href="index.html">Voltar para a Home</a>
+  </header>
+
+  <div class="container">
+    <p class="muted">A taxa total da plataforma é de <strong>10%</strong> sobre o valor do serviço. Dela, até <strong>2%</strong> vai para o <strong>indicador</strong> e <strong>8%</strong> para a <strong>plataforma</strong>. O custo do meio de pagamento (PIX, débito, crédito) é abatido da parte da plataforma.</p>
+
+    <h2>1) À Vista — <span class="badge">PIX / Débito / Crédito 1x</span></h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Suposições</h3>
+        <ul>
+          <li>PIX: custo 0,5%</li>
+          <li>Débito: custo 1,0%</li>
+          <li>Crédito 1x: custo 3,0%</li>
+        </ul>
+        <p class="muted">O indicador sempre recebe 2% do valor do serviço.</p>
+      </div>
+      <div class="card">
+        <h3>Exemplos práticos (R$ 150 / 300 / 1.000)</h3>
+        <table>
+          <thead><tr><th>Método</th><th>Prof.</th><th>Indic.</th><th>Plataf. (bruto)</th><th>− Custo meio</th><th>Plataf. (líquido)</th></tr></thead>
+          <tbody>
+            <tr><td>PIX</td><td>90%</td><td>2%</td><td>8%</td><td>0,5%</td><td>~7,5%</td></tr>
+            <tr><td>Débito</td><td>90%</td><td>2%</td><td>8%</td><td>1,0%</td><td>~7,0%</td></tr>
+            <tr><td>Crédito 1x</td><td>90%</td><td>2%</td><td>8%</td><td>3,0%</td><td>~5,0%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h2>2) Crédito Parcelado — <span class="badge">Recebimento em 30 dias (sem antecipar)</span></h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Suposições</h3>
+        <ul>
+          <li>Custo médio do cartão: <strong>5%</strong> (parcelado)</li>
+          <li>Repasse: Prof. 90% | Indic. 2% | Plataf. 8% (bruto)</li>
+          <li>Liquidação: parcelas mensais para o profissional</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Exemplos práticos (R$ 150 / 300 / 1.000)</h3>
+        <table>
+          <thead><tr><th>Ticket</th><th>Profissional (90%)</th><th>Indicador (2%)</th><th>Plataforma (8% bruto)</th><th>− Custo 5%</th><th>Plataforma (líquido)</th></tr></thead>
+          <tbody>
+            <tr><td>R$ 150</td><td>R$ 135,00</td><td>R$ 3,00</td><td>R$ 12,00</td><td>R$ 7,50</td><td>R$ 4,50</td></tr>
+            <tr><td>R$ 300</td><td>R$ 270,00</td><td>R$ 6,00</td><td>R$ 24,00</td><td>R$ 15,00</td><td>R$ 9,00</td></tr>
+            <tr><td>R$ 1.000</td><td>R$ 900,00</td><td>R$ 20,00</td><td>R$ 80,00</td><td>R$ 50,00</td><td>R$ 30,00</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h2>3) Crédito Parcelado — <span class="badge">Antecipado (recebe tudo agora)</span></h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Suposições</h3>
+        <ul>
+          <li>Custo total (parcelamento + antecipação): <strong>8%</strong></li>
+          <li>Repasse base: Prof. 90% | Indic. 2% | Plataf. 8% (bruto)</li>
+          <li>Opções de equilíbrio:
+            <ul>
+              <li><strong>A)</strong> Plataforma absorve custo (margem menor)</li>
+              <li><strong>B)</strong> Repasse parcial ao cliente (ex.: +2%)</li>
+              <li><strong>C)</strong> Profissional escolhe antecipar e arca com parte (ex.: +2% a +3%)</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Exemplos práticos (R$ 150 / 300 / 1.000)</h3>
+        <table>
+          <thead><tr><th>Ticket</th><th>Profissional (90%)</th><th>Indicador (2%)</th><th>Plataforma (8% bruto)</th><th>− Custo 8%</th><th>Plataforma (líquido)</th></tr></thead>
+          <tbody>
+            <tr><td>R$ 150</td><td>R$ 135,00</td><td>R$ 3,00</td><td>R$ 12,00</td><td>R$ 12,00</td><td>R$ 0,00</td></tr>
+            <tr><td>R$ 300</td><td>R$ 270,00</td><td>R$ 6,00</td><td>R$ 24,00</td><td>R$ 24,00</td><td>R$ 0,00</td></tr>
+            <tr><td>R$ 1.000</td><td>R$ 900,00</td><td>R$ 20,00</td><td>R$ 80,00</td><td>R$ 80,00</td><td>R$ 0,00</td></tr>
+          </tbody>
+        </table>
+        <p class="muted">Se desejar manter margem, usar as opções B ou C acima. Ex.: repasse de 2% ao cliente → plataforma líquida ≈ 2%.</p>
+      </div>
+    </div>
+
+    <h2>Bônus: Gratidão do Executor</h2>
+    <p>Após a conclusão do serviço, o executor pode enviar um valor extra de gratidão ao indicador (R$ 1, R$ 3, R$ 5 ou valor personalizado). Esse valor vai 100% para o indicador e não afeta a taxa de 10%.</p>
+
+    <p class="muted">Obs.: As taxas de meio de pagamento são estimativas de mercado e podem variar por volume e negociação com o gateway.</p>
+  </div>
+</body>
+</html>
